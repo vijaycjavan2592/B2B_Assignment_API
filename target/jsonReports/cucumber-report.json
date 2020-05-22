@@ -1,0 +1,194 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-22T16:58:35.798Z",
+        "line": 13,
+        "name": "Verify add new user functionality",
+        "description": "",
+        "id": "add-user-functionality;verify-add-new-user-functionality;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 526000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add user payload with \"Leanne Graham\" and \"Bret\" and \"Sincere@april.biz\" and \"1-770-736-8031 x56442\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Leanne Graham\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"Bret\"",
+                  "offset": 42
+                },
+                {
+                  "val": "\"Sincere@april.biz\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"1-770-736-8031 x56442\"",
+                  "offset": 77
+                }
+              ],
+              "location": "stepDefinations.AddUser_StepDefination.add_user_payload_with_and_and_and(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2843000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user call \"AddUserAPI\" with Post http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddUserAPI\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinations.AddUser_StepDefination.user_call_with_Post_http_request(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "API call is sucess with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 36
+                }
+              ],
+              "location": "stepDefinations.AddUser_StepDefination.api_call_is_sucess_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 487000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify \"Leanne Graham\" and \"Bret\" and \"Sincere@april.biz\" and \"1-770-736-8031 x56442\" in response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Leanne Graham\"",
+                  "offset": 7
+                },
+                {
+                  "val": "\"Bret\"",
+                  "offset": 27
+                },
+                {
+                  "val": "\"Sincere@april.biz\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"1-770-736-8031 x56442\"",
+                  "offset": 62
+                }
+              ],
+              "location": "stepDefinations.AddUser_StepDefination.verify_and_and_and_in_response(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateUser"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-22T16:58:39.697Z",
+        "line": 16,
+        "name": "Get the data of added user",
+        "description": "",
+        "id": "add-user-functionality;get-the-data-of-added-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Get the id of new added user",
+            "match": {
+              "location": "stepDefinations.AddUser_StepDefination.get_the_id_of_new_added_user()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2517000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user call \"GetUserAPI\" with Get http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetUserAPI\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinations.AddUser_StepDefination.user_call_with_Get_http_request(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "then API call is sucess with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinations.AddUser_StepDefination.then_API_call_is_sucess_with_status_code(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@GetUser"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Add user functionality",
+    "description": "",
+    "id": "add-user-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/User.feature",
+    "tags": []
+  }
+]
